@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Analyzing the Local Approximation of Trigonometric Functions using Chebyshev and Taylor Polynomials</title>
+</head>
+<body>
+  <script src="./data/approximations.js"></script>
+  <script src="./data/error.js"></script>
+  <div id="toggle">
+    <p>Toggle Between Graphs</p>
+    <label class="switch"> 
+      <input type="checkbox" title="Toggle between the function graph and the error graph" checked>
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div id="functionGraphContainer">
+    <div id="input">
+      <form>
+        <label for="function">Function:</label>
+        <select id="function" name="function">
+          <option value="exp">exp(x)</option>
+          <option value="sin">sin(x)</option>
+          <option value="cos">cos(x)</option>
+          <option value="tan">tan(x)</option>
+          <option value="asin">asin(x)</option>
+          <option value="acos">acos(x)</option>
+          <option value="atan">atan(x)</option>
+          <option value="csc">csc(x+2)</option>
+          <option value="sec">sec(x)</option>
+          <option value="cot">cot(x+2)</option>
+          <option value="acsc">acsc(x+2)</option>
+          <option value="asec">asec(x+2)</option>
+          <option value="acot">acot(x+2)</option>
+        </select>
+        <label for="degree">Degree:</label>
+        <select id="degree" name="degree">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">15</option>
+          <option value="12">20</option>
+          <option value="13">25</option>
+        </select>
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+    <div id="graphContainer">
+      <canvas id="graph" width="500px" height="750px"></canvas>
+      <canvas id="absoluteError" width="500px" height="750px"></canvas>
+    </div>
+  </div>
+  <div id="errorGraphContainer">
+    <div id="Einput">
+      <form>
+        <label for="Efunction">Function:</label>
+        <select id="Efunction" name="Efunction">
+          <option value="exp">exp(x)</option>
+          <option value="sin">sin(x)</option>
+          <option value="cos">cos(x)</option>
+          <option value="tan">tan(x)</option>
+          <option value="asin">asin(x)</option>
+          <option value="acos">acos(x)</option>
+          <option value="atan">atan(x)</option>
+          <option value="csc">csc(x+2)</option>
+          <option value="sec">sec(x)</option>
+          <option value="cot">cot(x+2)</option>
+          <option value="acsc">acsc(x+2)</option>
+          <option value="asec">asec(x+2)</option>
+          <option value="acot">acot(x+2)</option>
+        </select>
+        <label for="Eerror">Error:</label>
+        <select id="Eerror" name="Eerror">
+          <option value="rmse">RMSE</option>
+          <option value="mape">MAPE</option>
+          <option value="r_squared">R^2</option>
+        </select>
+        <input type="submit" value="Submit" id="Esubmit">
+      </form>
+      <div id="Egraphcontainer">
+        <canvas id="Egraph" width="750px" height="750px"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/canvasUtils.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/errorGraph.js"></script>
+  <script src="js/toggle.js"></script>
+</body>
+</html>
