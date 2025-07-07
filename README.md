@@ -16,7 +16,7 @@ Project code used for 2025 Massachusetts Science and Engineering Fair project **
 Included in this repository are
 - Python code used to gather the data concering the approximations
 - CSV files containing the raw data itself, as well as several files giving summaries and concise ways to view the data
-- A web app used to visualize the data through charts
+- A <a href=https://github.com/JAMBallou/taylor-cheby-app>web app</a> used to visualize the data through charts (follow link to see child repository with app)
 
 ## API Reference
 
